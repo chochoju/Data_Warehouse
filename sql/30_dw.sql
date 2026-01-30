@@ -1,7 +1,5 @@
 -- DW LAYER (STAR SCHEMA + LOADS)
 
-CREATE SCHEMA IF NOT EXISTS dw;
-
 -- 1) DIMENSIONS
 
 -- Customer dimension
@@ -98,8 +96,21 @@ CREATE TABLE dw.fact_review (
 
 -- 3) LOAD DIMENSIONS
 
+-- Clear DW tables (truncate facts first, then dims)
+TRUNCATE TABLE
+  dw.fact_review,
+  dw.fact_payment,
+  dw.fact_order_item,
+  dw.fact_order,
+  dw.dim_payment_type,
+  dw.dim_product,
+  dw.dim_seller,
+  dw.dim_customer
+RESTART IDENTITY;
+
+SELECT COUNT(*) FROM dw.dim_customer;
+
 -- dim_customer
-TRUNCATE TABLE dw.dim_custoemr RESTART IDENTITY;
 INSERT INTO dw.dim_customer (customer_id, customer_unique_id, zip_code_prefix, city, state)
 SELECT 
 	c.customer_id,
@@ -110,7 +121,6 @@ SELECT
 FROM stg.customers c;
 
 -- dim_seller
-TRUNCATE TABLE dw.dim_seller RESTART IDENTITY;
 INSERT INTO dw.dim_seller (seller_id, zip_code_prefix, city, state)
 SELECT
 	s.seller_id,
@@ -120,7 +130,6 @@ SELECT
 FROM stg.sellers s;
 
 -- dim_product
-TRUNCATE TABLE dw.dim_product RESTART IDENTITY;
 INSERT INTO dw.dim_product (product_id, category_pt, category_en, weight_g, length_cm, height_cm, width_cm)
 SELECT
 	p.product_id,
@@ -135,7 +144,6 @@ LEFT JOIN stg.category_translation ct
 	ON ct.product_category_name = p.product_category_name;
 
 -- dim_payment_type
-TRUNCATE TABLE dw.dim_payment_type RESTART IDENTITY;
 INSERT INTO dw.dim_payment_type (payment_type)
 SELECT DISTINCT p.payment_type
 FROM stg.payments p
@@ -144,7 +152,6 @@ WHERE p.payment_type IS NOT NULL;
 -- 4) LOAD FACTS
 
 -- fact_order
-TRUNCATE TABLE dw.fact_order;
 INSERT INTO dw.fact_order (
 	order_id, customer_key, order_status,
 	order_purchase_ts, order_approved_ts,
@@ -170,7 +177,7 @@ JOIN dw.dim_customer dc
 	ON dc.customer_id = o.customer_id;
 
 -- fact_order_item
-TRUNCATE TABLE dw.fact_order_item (
+INSERT INTO dw.fact_order_item (
 	order_id, order_item_id, product_key, seller_key,
   	shipping_limit_ts, price, freight_value
 )
@@ -191,7 +198,6 @@ JOIN dw.dim_seller ds
 	ON ds.seller_id = i.seller_id;
 
 -- fact_payment
-TRUNCATE TABLE dw.fact_payment RESTART IDENTITY;
 INSERT INTO dw.fact_payment (
 	order_id, payment_type_key, payment_sequential,
   	payment_installments, payment_value
@@ -209,7 +215,6 @@ JOIN dw.dim_payment_type dpt
 	ON dpt.payment_type = p.payment_type;
 
 -- fact_review
-TRUNCATE TABLE dw.fact_review;
 INSERT INTO dw.fact_review (
 	review_id, order_id, review_score, 
 	review_creation_ts, review_answer_ts

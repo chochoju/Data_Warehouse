@@ -90,15 +90,17 @@ CREATE TABLE raw.olist_category_translation (
 
 
 -- LOAD RAW
+-- Raw CSV files were loaded using pgAdmin’s Import tool 
+-- due to local file permission restrictions in PostgreSQL on Windows.
 
-COPY raw.olist_customers FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_customers.csv" WITH (FORMAT csv, HEADER true); 
-COPY raw.olist_geolocation FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_geolocation.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_orders FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_orders.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_order_items FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_order_items.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_products FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_products.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_sellers FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_sellers.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_order_payments FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_order_payments.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_order_reviews FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_order_reviews.csv" WITH (FORMAT csv, HEADER true);
-COPY raw.olist_category_translation FROM "C:\Users\Qcells\Desktop\Github\Data_Warehouse\data\raw\olist_product_category_translation.csv" WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_customers FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true); 
+-- COPY raw.olist_geolocation FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_orders FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_order_items FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_products FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_sellers FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_order_payments FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_order_reviews FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
+-- COPY raw.olist_category_translation FROM '/absolute/path/to/olist_customers.csv' WITH (FORMAT csv, HEADER true);
 
 

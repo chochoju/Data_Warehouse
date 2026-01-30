@@ -10,7 +10,7 @@ SELECT
 	COUNT(*) FILTER (WHERE fo.order_status = 'delivered') AS delivered_orders,
 	SUM(COALESCE(oi.price,0) + COALESCE(oi.freight_value,0)) AS gmv,
 	SUM(COALESCE(oi.price,0)) AS item_revenue,
-	SUM(COALESCE(oi.feight_value,0)) AS freight_revenue,
+	SUM(COALESCE(oi.freight_value,0)) AS freight_revenue,
 	AVG(SUM(COALESCE(oi.price,0) + COALESCE(oi.freight_value,0)))
 		OVER(ORDER BY fo.order_purchase_ts::date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS gmv_7d_avg	
 FROM dw.fact_order fo
@@ -28,10 +28,10 @@ SELECT
 	COUNT(DISTINCT fo.order_id) AS orders,
 	SUM(COALESCE(oi.price,0)) AS item_revenue,
 	SUM(COALESCE(oi.freight_value,0)) AS freight_revenue,
-	SUM(COALESCE(oi.price,0) + COALESCE(oi.friehgt_value,0)) AS gmv,
+	SUM(COALESCE(oi.price,0) + COALESCE(oi.freight_value,0)) AS gmv,
 	COUNT(*) AS items_sold
 FROM dw.fact_order fo
-JOIN dw.fact_order_item
+JOIN dw.fact_order_item oi
 	ON oi.order_id = fo.order_id
 JOIN dw.dim_product dp
 	ON dp.product_key = oi.product_key
@@ -58,7 +58,7 @@ SELECT
 		END
 	) AS on_time_rate
 FROM dw.fact_order fo
-WHERE fo.order_purchaase_ts IS NOT NULL
+WHERE fo.order_purchase_ts IS NOT NULL
 GROUP BY fo.order_purchase_ts::date;
 
 
@@ -67,7 +67,7 @@ CREATE OR REPLACE VIEW mart.customer_segments_monthly AS
 WITH customer_orders AS (
 	SELECT
 		dc.customer_key,
-		DATE_TRUNC('month', fo.order_purcahe_ts)::date AS month,
+		DATE_TRUNC('month', fo.order_purchase_ts)::date AS month,
 		COUNT(DISTINCT fo.order_id) AS orders_in_month
 	FROM dw.fact_order fo
 	JOIN dw.dim_customer dc 
@@ -171,7 +171,7 @@ SELECT
 FROM seller_gmv sg
 JOIN dw.dim_seller ds 
 	ON ds.seller_key = sg.seller_key
-LEFT JOIN seller_review sr
+LEFT JOIN seller_reviews sr
 	ON sr.seller_key = sg.seller_key AND sr.month = sg.month;
 
 

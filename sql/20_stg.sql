@@ -31,13 +31,13 @@ CREATE TABLE stg.geolocation (
 	state			text
 );
 
-INSERT INTO stg.geolocation (zip_code_prefix, lat, lng, city, city)
+INSERT INTO stg.geolocation (zip_code_prefix, lat, lng, city, state)
 SELECT DISTINCT
 	NULLIF(TRIM(geolocation_zip_code_prefix), '')::integer AS zip_code_prefix,
 	NULLIF(TRIM(geolocation_lat), '')::numeric AS lat,
-	NULLIF(TRIM(geolocatoin_lng), '')::numeric AS lng,
-	NULLIF(TRIM(geolocatoin_city), '') AS city,
-	NULLIF(TRIM(geolocatoin_state), '') AS STATE
+	NULLIF(TRIM(geolocation_lng), '')::numeric AS lng,
+	NULLIF(TRIM(geolocation_city), '') AS city,
+	NULLIF(TRIM(geolocation_state), '') AS STATE
 FROM raw.olist_geolocation
 WHERE NULLIF(TRIM(geolocation_zip_code_prefix), '') IS NOT NULL;
 
@@ -64,7 +64,7 @@ SELECT DISTINCT ON (TRIM(order_id))
 	TRIM(order_id) AS order_id,
 	TRIM(customer_id) AS customer_id,
 	LOWER(TRIM(order_status)) AS order_status,
-	NULLIF(TRIM(order_purcahse_timestamp), '')::timestamp AS order_purcahse_ts,
+	NULLIF(TRIM(order_purchase_timestamp), '')::timestamp AS order_purcahse_ts,
 	NULLIF(TRIM(order_approved_at), '')::timestamp AS order_approved_ts,
 	NULLIF(TRIM(order_delivered_carrier_date), '')::timestamp AS delivered_carrier_ts,
 	NULLIF(TRIM(order_delivered_customer_date), '')::timestamp AS delivered_customer_ts,
@@ -84,7 +84,7 @@ CREATE TABLE stg.order_items (
 	order_item_id		integer NOT NULL,
 	product_id			text NOT NULL,
 	seller_id			text NOT NULL,
-	shipping_limits_ts	timestamp,
+	shipping_limit_ts	timestamp,
 	price				numeric(12,2),
 	freight_value		numeric(12,2),
 	PRIMARY KEY (order_id, order_item_id)
@@ -92,7 +92,7 @@ CREATE TABLE stg.order_items (
 
 INSERT INTO stg.order_items (
 	order_id, order_item_id, product_id, seller_id,
-	shipping_limits_ts, price, freight_value
+	shipping_limit_ts, price, freight_value
 )
 SELECT DISTINCT ON (TRIM(order_id), NULLIF(TRIM(order_item_id), '')::integer)
 	TRIM(order_id) AS order_id,
@@ -137,10 +137,10 @@ SELECT DISTINCT ON (TRIM(product_id))
 	NULLIF(TRIM(product_name_lenght), '')::integer AS product_name_length,
 	NULLIF(TRIM(product_description_lenght), '')::integer AS product_description_length,
 	NULLIF(TRIM(product_photos_qty), '')::integer AS product_photos_qty,
-	NULLIF(TRIM(product_weight_g)), '')::integer AS product_weight_g,
-	NULLIF(TRIM(product_length_cm)), '')::integer AS product_length_cm,
-	NULLIF(TRIM(product_height_cm)), '')::integer AS product_height_cm,
-	NULLIF(TRIM(product_width_cm)), '')::integer AS product_width_cm
+	NULLIF(TRIM(product_weight_g), '')::integer AS product_weight_g,
+	NULLIF(TRIM(product_length_cm), '')::integer AS product_length_cm,
+	NULLIF(TRIM(product_height_cm), '')::integer AS product_height_cm,
+	NULLIF(TRIM(product_width_cm), '')::integer AS product_width_cm
 FROM raw.olist_products
 WHERE NULLIF(TRIM(product_id), '') IS NOT NULL
 ORDER BY TRIM(product_id);
@@ -182,7 +182,7 @@ SELECT DISTINCT ON (TRIM(order_id), NULLIF(TRIM(payment_sequential), '')::intege
 	TRIM(order_id) AS order_id,
 	NULLIF(TRIM(payment_sequential), '')::integer AS payment_sequential,
 	NULLIF(LOWER(TRIM(payment_type)), '') AS payment_type,
-	NULLIF(TRIM(payment_installment), '')::integer AS payment_installments,
+	NULLIF(TRIM(payment_installments), '')::integer AS payment_installments,
 	NULLIF(TRIM(payment_value), '')::numeric(12,2) AS payment_value
 FROM raw.olist_order_payments
 WHERE NULLIF(TRIM(order_id), '') IS NOT NULL
