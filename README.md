@@ -74,23 +74,23 @@ This project mirrors that reality and serves as a **hands-on case study** for:
 
 Raw CSV Files
 
-  ↓
+   ↓
 
 RAWSchema (PostgreSQL)
 
-  ↓
+   ↓
 
 STGSchema (cleaning, typing, deduplication)
 
-  ↓
+   ↓
 
 DWSchema (starschema: dimensions & facts)
 
-  ↓
+   ↓
 
 MARTSchema (business-focused views)
 
-  ↓
+   ↓
 
 Power BI Dashboard
 
