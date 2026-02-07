@@ -1,4 +1,4 @@
-# E-commerce Data Warehouse & BI Case Study (PostgreSQL + Power BI)
+# Data Warehouse & BI Case Study (Star Schema w/ PostgreSQL + Power BI)
 
 
 
