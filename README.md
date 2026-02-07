@@ -316,3 +316,21 @@ Due to local file permission restrictions in PostgreSQL on Windows, CSV files we
 
 `COPY` command templates are included in SQL files for reference and portability.
 
+
+
+---
+
+
+
+## Contact
+
+
+
+If you’d like to discuss this project or my work:
+
+
+
+- **LinkedIn:** https://www.linkedin.com/in/juyeon-cho/
+
+- **Email:** jc973@alumni.duke.edu
+
