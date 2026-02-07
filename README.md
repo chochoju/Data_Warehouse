@@ -152,27 +152,27 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 1. **Executive Overview**
 
-&nbsp;   - GMV & order trends
+   - GMV & order trends
 
-&nbsp;   - Category performance
+   - Category performance
 
-&nbsp;   - Geographic GMV by customer state (map)
+   - Geographic GMV by customer state (map)
 
 2. **Delivery & Customer Experience**
 
-&nbsp;   - On-time delivery rate
+   - On-time delivery rate
 
-&nbsp;   - Delivery time trends
+   - Delivery time trends
 
-&nbsp;   - Seller performance vs customer reviews
+   - Seller performance vs customer reviews
 
 3. **Growth & Monetization Drivers**
 
-&nbsp;   - Customer segmentation (New / Returning / Loyal)
+   - Customer segmentation (New / Returning / Loyal)
 
-&nbsp;   - Payment mix trends
+   - Payment mix trends
 
-&nbsp;   - Seller concentration & revenue drivers
+   - Seller concentration & revenue drivers
 
 
 
@@ -190,11 +190,7 @@ Each page is designed to answer a specific business question while maintaining a
 
 ```
 
-.
-
-├─ README.md
-
-├─sql/
+┌─ sql/
 
 │  ├─00_init.sql-- schema creation
 
@@ -212,11 +208,17 @@ Each page is designed to answer a specific business question while maintaining a
 
 │  └─ erd.png
 
-└─ data/
+├─ powerbi/
 
-&nbsp;  └─ README.md-- dataset download instructions
+│  ├─ecommerce_analysis.pbix-- Power BI Dashboard
 
+│  └─ecommerce_analysis_screenshot.pdf-- Dashboard screenshots
 
+├─ data/
+
+  └─ README.md-- dataset download instructions
+
+└─ README.md
 
 ```
 
