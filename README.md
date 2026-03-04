@@ -176,14 +176,16 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 
 
+
 <img width="1097" height="617" alt="image" src="https://github.com/user-attachments/assets/1c37f283-1c28-4138-b007-37286ba110a1" />
+
 
 
 <img width="1100" height="617" alt="image" src="https://github.com/user-attachments/assets/7545f47b-6be5-415d-b6cb-75c04c78f78e" />
 
 
-<img width="1101" height="616" alt="image" src="https://github.com/user-attachments/assets/cdf2dd53-5f31-4a72-ad3a-d527734478b0" />
 
+<img width="1098" height="617" alt="image" src="https://github.com/user-attachments/assets/4e89e9dd-8cae-4d64-8bb1-a84e68212b73" />
 
 
 
