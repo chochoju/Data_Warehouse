@@ -146,17 +146,17 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 
 
-### Dashboard pages (max 3 pages)
+### Dashboard pages
 
 
 
 1. **Executive Overview**
 
-   - GMV & order trends
+   - GMV(Gross Merchandise Value) & Order trends
 
    - Category performance
 
-   - Geographic GMV by customer state (map)
+   - Geographic GMV by Customer State
 
 2. **Delivery & Customer Experience**
 
@@ -164,7 +164,7 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
    - Delivery time trends
 
-   - Seller performance vs customer reviews
+   - Seller performance vs Customer reviews
 
 3. **Growth & Monetization Drivers**
 
@@ -172,7 +172,7 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
    - Payment mix trends
 
-   - Seller concentration & revenue drivers
+   - Seller concentration & Revenue drivers
 
 
 
