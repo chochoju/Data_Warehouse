@@ -222,15 +222,17 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 ├─ docs/
 
-│  ├─ architecture.md
+│  ├─ architecture.md-- Data warehouse Architecture
 
-│  └─ erd.png
+│  ├─ erd_olist_source.md-- source data ERD diagram
+
+│  └─ erd_dw_star_schema.png-- star schema ERD diagram
 
 ├─ powerbi/
 
-│  ├─ecommerce_analysis.pbix-- Power BI Dashboard
+│  ├─ Data_Warehouse_Project.pbix-- Power BI Dashboard
 
-│  └─ecommerce_analysis_screenshot.pdf-- Dashboard screenshots
+│  └─ Olist_PowerBI_Dashboard.pdf-- Dashboard screenshots
 
 ├─ data/
 
