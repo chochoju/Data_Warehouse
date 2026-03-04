@@ -50,27 +50,17 @@ The dataset consists of **9 relational tables**:
 
 
 
-| Table | Description |
-
-|-----|-----|
-
-| olist_orders_dataset | Core order information |
-
-| olist_customers_dataset | Customer identity and location |
-
-| olist_order_items_dataset | Items purchased in each order |
-
-| olist_order_payments_dataset | Payment methods and amounts |
-
-| olist_order_reviews_dataset | Customer satisfaction reviews |
-
-| olist_products_dataset | Product attributes |
-
-| olist_sellers_dataset | Seller information |
-
-| olist_geolocation_dataset | ZIP code geolocation mapping |
-
-| product_category_name_translation | Product category translation |
+| Dataset | Purpose |
+|--------|--------|
+| `olist_orders_dataset` | Core order lifecycle data |
+| `olist_customers_dataset` | Customer identity and location |
+| `olist_order_items_dataset` | Order line items |
+| `olist_order_payments_dataset` | Payment methods and values |
+| `olist_order_reviews_dataset` | Customer satisfaction reviews |
+| `olist_products_dataset` | Product attributes |
+| `olist_sellers_dataset` | Seller information |
+| `olist_geolocation_dataset` | ZIP prefix → geographic coordinates |
+| `product_category_name_translation` | Portuguese → English category mapping |
 
 
 
