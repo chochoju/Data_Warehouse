@@ -10,13 +10,33 @@ before becoming business-ready datasets used by analytics teams and BI tools.
 
 ## Architecture Overview
 
-```mermaid
-flowchart TD
-  A[Raw CSV Files] --> B[RAW Schema (PostgreSQL)]
-  B --> C[STG Schema<br/>Data Cleaning & Standardization]
-  C --> D[DW Schema<br/>Star Schema Data Warehouse]
-  D --> E[MART Schema<br/>Business Aggregations]
-  E --> F[Power BI Dashboard]
+```md
+## Architecture Overview
+
+```text
+Raw CSV Files
+     |
+     ```md
+## Architecture Overview
+
+```text
+Raw CSV Files
+     |
+     ▼
+RAW Schema (PostgreSQL)
+     |
+     ▼
+STG Schema (Data Cleaning & Standardization)
+     |
+     ▼
+DW Schema (Star Schema Data Warehouse)
+     |
+     ▼
+MART Schema (Business Aggregations)
+     |
+     ▼
+Power BI Dashboard
+
 ---
 
 ## Layer Descriptions
