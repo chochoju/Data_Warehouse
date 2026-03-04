@@ -1,8 +1,8 @@
-\# Dataset: Olist Brazilian E-Commerce Public Dataset
+# Dataset: Olist Brazilian E-Commerce Public Dataset
 
 
 
-This project uses the \*\*Olist Brazilian E-Commerce Public Dataset\*\*, a widely
+This project uses the **Olist Brazilian E-Commerce Public Dataset**, a widely
 
 used public dataset for analytics and data engineering practice.
 
@@ -10,7 +10,7 @@ used public dataset for analytics and data engineering practice.
 
 The dataset contains transactional data from the Brazilian e-commerce platform
 
-Olist between \*\*2016 and 2018\*\*, representing approximately \*\*100,000 orders\*\*
+Olist between **2016 and 2018**, representing approximately **100,000 orders**
 
 across multiple marketplaces. 
 
@@ -36,15 +36,15 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 
 
-\## Download Instructions
+## Download Instructions
 
 
 
-1\. Visit the dataset page on Kaggle.
+1. Visit the dataset page on Kaggle.
 
-2\. Download the CSV files.
+2. Download the CSV files.
 
-3\. Place them inside this directory.
+3. Place them inside this directory.
 
 
 
@@ -52,11 +52,11 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 
 
-\## Dataset Tables
+## Dataset Tables
 
 
 
-The dataset consists of \*\*9 relational tables\*\*:
+The dataset consists of **9 relational tables**:
 
 
 
@@ -64,23 +64,23 @@ The dataset consists of \*\*9 relational tables\*\*:
 
 |-----|-----|
 
-| olist\_orders\_dataset | Core order information |
+| olist_orders_dataset | Core order information |
 
-| olist\_customers\_dataset | Customer identity and location |
+| olist_customers_dataset | Customer identity and location |
 
-| olist\_order\_items\_dataset | Items purchased in each order |
+| olist_order_items_dataset | Items purchased in each order |
 
-| olist\_order\_payments\_dataset | Payment methods and amounts |
+| olist_order_payments_dataset | Payment methods and amounts |
 
-| olist\_order\_reviews\_dataset | Customer satisfaction reviews |
+| olist_order_reviews_dataset | Customer satisfaction reviews |
 
-| olist\_products\_dataset | Product attributes |
+| olist_products_dataset | Product attributes |
 
-| olist\_sellers\_dataset | Seller information |
+| olist_sellers_dataset | Seller information |
 
-| olist\_geolocation\_dataset | ZIP code geolocation mapping |
+| olist_geolocation_dataset | ZIP code geolocation mapping |
 
-| product\_category\_name\_translation | Product category translation |
+| product_category_name_translation | Product category translation |
 
 
 
@@ -90,15 +90,15 @@ multiple perspectives including:
 
 
 
-\- sales performance
+- sales performance
 
-\- payment behavior
+- payment behavior
 
-\- delivery logistics
+- delivery logistics
 
-\- product performance
+- product performance
 
-\- customer satisfaction
+- customer satisfaction
 
 
 
@@ -106,11 +106,11 @@ multiple perspectives including:
 
 
 
-\## Notes
+## Notes
 
 
 
-The dataset is \*\*anonymized real commercial data\*\* provided by Olist.
+The dataset is **anonymized real commercial data** provided by Olist.
 
 
 
