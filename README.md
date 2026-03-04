@@ -30,6 +30,10 @@ The dataset used is the **Olist Brazilian E-commerce dataset**, a widely used pu
 
 
 
+<img width="1571" height="846" alt="erd_olist_source" src="https://github.com/user-attachments/assets/995f761d-35de-47d2-8de1-17d1202893b9" />
+
+
+
 ---
 
 
@@ -114,6 +118,10 @@ Power BI Dashboard
 
 
 
+<img width="1521" height="770" alt="erd_dw_star_schema" src="https://github.com/user-attachments/assets/f69d2d78-fe20-4632-918c-a80607e7dd61" />
+
+
+
 ---
 
 
@@ -146,17 +154,17 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 
 
-### Dashboard pages (max 3 pages)
+### Dashboard pages
 
 
 
 1. **Executive Overview**
 
-   - GMV & order trends
+   - GMV(Gross Merchandise Value) & Order trends
 
    - Category performance
 
-   - Geographic GMV by customer state (map)
+   - Geographic GMV by Customer State
 
 2. **Delivery & Customer Experience**
 
@@ -164,7 +172,7 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
    - Delivery time trends
 
-   - Seller performance vs customer reviews
+   - Seller performance vs Customer reviews
 
 3. **Growth & Monetization Drivers**
 
@@ -172,11 +180,21 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
    - Payment mix trends
 
-   - Seller concentration & revenue drivers
+   - Seller concentration & Revenue drivers
 
 
 
-Each page is designed to answer a specific business question while maintaining a clean, corporate reporting style.
+
+<img width="1097" height="617" alt="image" src="https://github.com/user-attachments/assets/1c37f283-1c28-4138-b007-37286ba110a1" />
+
+
+
+<img width="1100" height="617" alt="image" src="https://github.com/user-attachments/assets/7545f47b-6be5-415d-b6cb-75c04c78f78e" />
+
+
+
+<img width="1098" height="617" alt="image" src="https://github.com/user-attachments/assets/4e89e9dd-8cae-4d64-8bb1-a84e68212b73" />
+
 
 
 
@@ -204,15 +222,17 @@ Each page is designed to answer a specific business question while maintaining a
 
 ├─ docs/
 
-│  ├─ architecture.md
+│  ├─ architecture.md-- Data warehouse Architecture
 
-│  └─ erd.png
+│  ├─ erd_olist_source.png-- source data ER diagram
+
+│  └─ erd_dw_star_schema.png-- star schema ER diagram
 
 ├─ powerbi/
 
-│  ├─ecommerce_analysis.pbix-- Power BI Dashboard
+│  ├─ Data_Warehouse_Project.pbix-- Power BI Dashboard
 
-│  └─ecommerce_analysis_screenshot.pdf-- Dashboard screenshots
+│  └─ Olist_PowerBI_Dashboard.pdf-- Dashboard screenshots
 
 ├─ data/
 
