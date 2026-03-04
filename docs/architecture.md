@@ -12,20 +12,15 @@ before becoming business-ready datasets used by analytics teams and BI tools.
 
 ```text
 Raw CSV Files
-     |
-     ▼
+     ↓
 RAW Schema (PostgreSQL)
-     |
-     ▼
+     ↓
 STG Schema (Data Cleaning & Standardization)
-     |
-     ▼
+     ↓
 DW Schema (Star Schema Data Warehouse)
-     |
-     ▼
+     ↓
 MART Schema (Business Aggregations)
-     |
-     ▼
+     ↓
 Power BI Dashboard
 ```
 ---
