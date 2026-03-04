@@ -175,11 +175,16 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
    - Seller concentration & Revenue drivers
 
 
-<img width="1698" height="953" alt="image" src="https://github.com/user-attachments/assets/1a0b2328-3d35-4969-89bb-2ffc2550e67f" />
+
+<img width="1097" height="617" alt="image" src="https://github.com/user-attachments/assets/1c37f283-1c28-4138-b007-37286ba110a1" />
 
 
+<img width="1100" height="617" alt="image" src="https://github.com/user-attachments/assets/7545f47b-6be5-415d-b6cb-75c04c78f78e" />
 
-Each page is designed to answer a specific business question while maintaining a clean, corporate reporting style.
+
+<img width="1101" height="616" alt="image" src="https://github.com/user-attachments/assets/cdf2dd53-5f31-4a72-ad3a-d527734478b0" />
+
+
 
 
 
