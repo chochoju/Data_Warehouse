@@ -30,6 +30,10 @@ The dataset used is the **Olist Brazilian E-commerce dataset**, a widely used pu
 
 
 
+<img width="1571" height="846" alt="erd_olist_source" src="https://github.com/user-attachments/assets/995f761d-35de-47d2-8de1-17d1202893b9" />
+
+
+
 ---
 
 
@@ -111,6 +115,10 @@ Power BI Dashboard
 - **DW**: Star schema with dimensions and fact tables
 
 - **MART**: Business-ready aggregated views used directly by Power BI
+
+
+
+<img width="1521" height="770" alt="erd_dw_star_schema" src="https://github.com/user-attachments/assets/f69d2d78-fe20-4632-918c-a80607e7dd61" />
 
 
 
