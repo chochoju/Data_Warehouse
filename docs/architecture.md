@@ -10,15 +10,6 @@ before becoming business-ready datasets used by analytics teams and BI tools.
 
 ## Architecture Overview
 
-```md
-## Architecture Overview
-
-```text
-Raw CSV Files
-     |
-     ```md
-## Architecture Overview
-
 ```text
 Raw CSV Files
      |
