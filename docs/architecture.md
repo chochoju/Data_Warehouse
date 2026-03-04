@@ -27,7 +27,7 @@ MART Schema (Business Aggregations)
      |
      ▼
 Power BI Dashboard
-
+```
 ---
 
 ## Layer Descriptions
