@@ -224,7 +224,7 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 │  ├─ architecture.md-- Data warehouse Architecture
 
-│  ├─ erd_olist_source.md-- source data ERD diagram
+│  ├─ erd_olist_source.png-- source data ERD diagram
 
 │  └─ erd_dw_star_schema.png-- star schema ERD diagram
 
