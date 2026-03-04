@@ -46,7 +46,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 
 
-The dataset consists of **9 relational tables**:
+The dataset consists of **9 relational tables**. 
 
 
 
@@ -78,6 +78,9 @@ Together these tables allow analysts to explore the e-commerce process from mult
 
 - customer satisfaction
 
+
+
+The ER Diagram below was created by dbdiagram.io.
 
 
 <img width="1571" height="846" alt="erd_olist_source" src="https://github.com/user-attachments/assets/26d3e0bf-05fc-4ba9-b734-6abe6d5268a7" />
