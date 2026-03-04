@@ -175,3 +175,22 @@ LEFT JOIN seller_reviews sr
 	ON sr.seller_key = sg.seller_key AND sr.month = sg.month;
 
 
+-- GMV by Customer State (geo mart)
+CREATE OR REPLACE VIEW mart.gmv_by_customer_state AS
+SELECT
+	dc.state AS state,
+	fo.order_purchase_ts::date AS order_date,
+	SUM(COALESCE(oi.price,0)+COALESCE(oi.freight_value,0)) AS gmv,
+	COUNT(DISTINCT fo.order_id) AS orders
+FROM dw.fact_order fo
+JOIN dw.fact_order_item oi ON oi.order_id = fo.order_id
+JOIN dw.dim_customer dc ON dc.customer_key = fo.customer_key
+WHERE fo.order_purchase_ts IS NOT NULL
+GROUP BY dc.state, fo.order_purchase_ts::date;
+
+
+-- Seller by State (geo mart)
+CREATE OR REPLACE VIEW mart.sellers_by_state AS
+SELECT state, COUNT(DISTINCT seller_id) AS sellers
+FROM dw.dim_seller
+GROUP BY state;
