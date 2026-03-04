@@ -2,25 +2,15 @@
 
 
 
-This project uses the **Olist Brazilian E-Commerce Public Dataset**, a widely
-
-used public dataset for analytics and data engineering practice.
+This project uses the **Olist Brazilian E-Commerce Public Dataset**, a widely used public dataset for analytics and data engineering practice.
 
 
 
-The dataset contains transactional data from the Brazilian e-commerce platform
-
-Olist between **2016 and 2018**, representing approximately **100,000 orders**
-
-across multiple marketplaces. 
+The dataset contains transactional data from the Brazilian e-commerce platform Olist between **2016 and 2018**, representing approximately **100,000 orders** across multiple marketplaces. 
 
 
 
-The data enables analysts to examine the full lifecycle of an order, including
-
-customer information, payments, logistics, product details, and customer
-
-reviews.
+The data enables analysts to examine the full lifecycle of an order, including customer information, payments, logistics, product details, and customer reviews.
 
 
 
@@ -84,9 +74,7 @@ The dataset consists of **9 relational tables**:
 
 
 
-Together these tables allow analysts to explore the e-commerce process from
-
-multiple perspectives including:
+Together these tables allow analysts to explore the e-commerce process from multiple perspectives including:
 
 
 
@@ -114,7 +102,5 @@ The dataset is **anonymized real commercial data** provided by Olist.
 
 
 
-Company and partner names have been replaced or anonymized for privacy
-
-purposes.
+Company and partner names have been replaced or anonymized for privacy purposes.
 
