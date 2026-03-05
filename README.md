@@ -216,6 +216,8 @@ The Power BI report is built **entirely on top of `mart.*` views**, reflecting b
 
 │  ├─20_stg.sql-- staging transformations
 
+│  ├─25_sanity_checks.sql-- mid sanity checks
+
 │  ├─30_dw.sql-- data warehouse (star schema)
 
 │  └─40_marts.sql-- BI-ready data marts
